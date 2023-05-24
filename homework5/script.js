@@ -24,7 +24,7 @@ function makeRequest() {
         imagesDiv.innerHTML = "Лимит вне диапазона от 1 до 10";
         return;
     }
-    if (!isValidNumber(page) && !isValidNumber(limit)) {
+    if (!Number(page) || !Number(limit)) {
         imagesDiv.innerHTML = "Номер страницы и лимит вне диапазона от 1 до 10";
         return;
     }
